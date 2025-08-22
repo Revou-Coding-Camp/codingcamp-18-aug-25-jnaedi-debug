@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="todo">
+        <div class="todo-header">
+            <h1 class="todo-title">Todo List</h1>
+        </div>
+
+        <div class="input">
+            <input type="text" class="task-input" placeholder="Add a todo..." id="taskInput">
+            <input type="date" class="date-input" id="dateInput">
+            <button class="add-btn" onclick="addTask()">+</button>
+        </div>
+
+       <div class="controls">
+            <select id="filterSelect" onchange="filterTasks(this.value)" class="filter-select">
+            <option value="all">All</option>
+            <option value="completed">Completed</option>
+            <option value="pending">Pending</option>
+            </select>
+            <button class="delete-all-btn" onclick="deleteAllTasks()">Delete All</button>
+        </div>
+
+
+        <div class="table-header">
+            <span>Task</span>
+            <span>Due Date</span>
+            <span>Status</span>
+            <span>Actions</span>
+        </div>
+
+        <div class="task-list" id="taskList">
+            <div class="empty-state" id="emptyState">
+                No task found
+            </div>
+        </div>
+    </div>
+
+    <script src="JavaScripst/scirpt.js"></script>
+</body>
+</html>
